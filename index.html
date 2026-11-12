@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
   <header class="site-header">
@@ -22,9 +22,11 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <!-- <li><a href="#research">Research</a></li> -->
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#awards">Recognition</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -104,11 +106,43 @@
             <div class="timeline-content">
               <h3>CIST Graduate Research Assistant</h3>
               <p class="muted">University of Nebraska Omaha · Omaha, USA</p>
-              <ul>
-                <li>Designed extensions to a declarative programming language using functional syntax, custom operators, parser construction, and AST transformations.</li>
-                <li>Built a Python-based compilation pipeline with the Clingo API to transform functional programs into standard Answer Set Programming and back.</li>
-              </ul>
+              <p class="muted">Developing research software for programming languages and neuro-symbolic AI.</p>
             </div>
+
+            <section id="research" class="experience-research" aria-labelledby="research-title">
+              <div class="section-heading">
+                <p class="section-kicker">Research</p>
+                <h4 id="research-title">Master’s level research projects</h4>
+              </div>
+
+              <div class="research-grid">
+                <article class="project-card" aria-labelledby="funasp-title">
+                  <div class="project-topline">Programming Languages / Compilers</div>
+                  <h5 id="funasp-title">FUNASP (FunctionalASP)</h5>
+                  <p>
+                    Built an Answer Set Programming language extension with user-defined functions and aggregates.
+                    Implemented its Python compiler, parser, AST transformations, and Clingo integration, with
+                    automated testing and CI. Benchmarked compiler transformations on 180 ASP Competition instances.
+                  </p>
+                  <div class="tags">
+                    <span>Python</span><span>Compilers</span><span>AST</span><span>Clingo</span>
+                  </div>
+                </article>
+
+                <article class="project-card" aria-labelledby="neurasp-title">
+                  <div class="project-topline">Neuro-symbolic AI / Inference</div>
+                  <h5 id="neurasp-title">NeurASP</h5>
+                  <p>
+                    Developed an inference pipeline that compiles Answer Set Programming reasoning into reusable
+                    PyTorch modules for differentiable learning. Built a separate program-splitting prototype
+                    using dependency analysis and cached state transitions to reuse intermediate reasoning results.
+                  </p>
+                  <div class="tags">
+                    <span>Python</span><span>PyTorch</span><span>Clingo</span><span>Neuro-symbolic AI</span>
+                  </div>
+                </article>
+              </div>
+            </section>
           </article>
 
           <article class="timeline-item">
@@ -146,6 +180,44 @@
         </div>
 
         <div class="cards-grid">
+          <a
+              class="project-card"
+              href="https://github.com/ravip5921/Agentic_Harness"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Agentic Harness on GitHub"
+          >
+            <div class="project-topline">Agentic AI / Developer Tools</div>
+            <h3>Agentic Harness</h3>
+            <p>
+              Built a Python/LangGraph CLI that turns natural-language tasks into specifications, code, and
+              release candidates through Research, Developer, QA, and Release agents. Added Docker-based tests,
+              bounded repair loops, and human approval before creating draft pull requests.
+            </p>
+            <div class="tags">
+              <span>Python</span><span>LangGraph</span><span>Docker</span><span>pytest</span>
+            </div>
+          </a>
+
+          <a
+              class="project-card"
+              href="https://farmai.cht77.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open FarmAI live site"
+          >
+            <div class="project-topline">Document AI / Full-stack</div>
+            <h3 id="farmai-title">FarmAI</h3>
+            <p>
+              Built an app that converts scanned farm records into reviewable CSV/JSON using OpenCV and
+              vision-LLM OCR. Connected a React/FastAPI review interface to SQLite-backed background jobs,
+              supporting 9 form layouts and evaluating OCR across 712 ground-truth cells.
+            </p>
+            <div class="tags">
+              <span>OpenCV</span><span>OCR</span><span>FastAPI</span><span>React</span><span>SQLite</span>
+            </div>
+          </a>
+
           <a  
               class="project-card"
               href="https://github.com/ravip5921/Doctor-Speciality-Recommender"
@@ -239,7 +311,7 @@
         <div class="education-list">
           <article>
             <h3>M.S. Computer Science</h3>
-            <p class="muted">University of Nebraska Omaha · Jan 2025 - Dec 2026 Expected</p>
+            <p class="muted">University of Nebraska Omaha · Jan 2025 · In Progress</p>
             <p>GPA: 4.0</p>
             <p>Relevant coursework: Design and Analysis of Algorithms, Artificial Intelligence, Database Management Systems, Advanced Operating Systems, Software Specifications & Design, Cloud Computing.</p>
           </article>
@@ -247,6 +319,7 @@
             <h3>B.E. Computer Engineering</h3>
             <p class="muted">Institute of Engineering, Pulchowk Campus, Tribhuvan University · 2018 - 2023</p>
             <p>GPA: 3.73</p>
+            <p>Relevant coursework: Data Structures, Object-Oriented Programming, Computer Organization and Architecture, Microprocessors, Embedded Systems, Digital Logic, Data Communication.</p>
           </article>
         </div>
       </div>
@@ -259,18 +332,35 @@
           <h2>Publications, honors, and awards</h2>
         </div>
         <div class="recognition-grid">
-          <article class="recognition-card">
+          <a 
+           class="recognition-card"
+           href="https://ictceel.khwopaconference.com/uploads/conferencepaper/fullpaper/1032.pdf"
+           target="_blank"
+           rel="noopener"
+           aria-label="View publication on ICT-CEEL 2023">
             <h3>Publication</h3>
             <p>Improved Pre-processing Techniques for Mobile-based OCR Systems, ICT-CEEL 2023.</p>
-          </article>
-          <article class="recognition-card">
+          </a>
+          <a 
+           class="recognition-card"
+           href="https://www.unomaha.edu/office-of-research-and-creative-activity/for-students/graca.php"
+           target="_blank"
+           rel="noopener"
+           aria-label="Information about GRACA Grant">
             <h3>GRACA Grant</h3>
-            <p>Recipient of the $5,000 Graduate Research & Creative Activity grant for summer research at UNO.</p>
-          </article>
-          <article class="recognition-card">
+            <p>Recipient of the $5,000 Graduate Research & Creative Activity grant (GRACA) for summer research at UNO.</p>
+          </a>
+          <a 
+           class="recognition-card"
+           href="https://openimis.org/blog/highlights-openimis-initiative-2022"
+           target="_blank"
+           rel="noopener"
+           aria-label="OpenIMIS-DRG Datathon 2022 Blog Post">
             <h3>Datathon Winner</h3>
-            <p>First Prize Winner in openIMIS-DRG Datathon 2022.</p>
-          </article>
+            <p><strong>Team:</strong> Cartographers
+            </br> 
+            First Prize Winner in openIMIS-DRG Datathon 2022.</p>
+          </a>
         </div>
       </div>
     </section>
